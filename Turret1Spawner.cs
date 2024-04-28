@@ -17,12 +17,11 @@ public class Turret1Spawner : MonoBehaviour
         moneyLogic = GameObject.FindFirstObjectByType<MoneyLogic>();
     }
 
-    // Update is called once per frame
+    // Funcion para crear una nueva torreta cuando haya suficiente dinero
     void Update()
     {
         if (moneyLogic.moneyScore >= cost)
         {
-            //rend.material.color = Color.white;
             if (!spawned)
             {
                 Instantiate(turret1, transform.position, transform.rotation);
